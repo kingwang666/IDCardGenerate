@@ -1,0 +1,60 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="60dp"
+            android:layout_height="34dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@drawable/wheel_btn_bg"/>
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="60dp"
+            android:layout_height="34dp"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@drawable/wheel_btn_bg"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.wang.wheel.widget.IOSWheelView
+            android:id="@+id/id_province"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp">
+        </com.wang.wheel.widget.IOSWheelView>
+
+        <com.wang.wheel.widget.IOSWheelView
+            android:id="@+id/id_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp">
+        </com.wang.wheel.widget.IOSWheelView>
+
+        <com.wang.wheel.widget.IOSWheelView
+            android:id="@+id/id_area"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="3dp"
+            android:paddingEnd="3dp">
+        </com.wang.wheel.widget.IOSWheelView>
+    </LinearLayout>
+</merge>

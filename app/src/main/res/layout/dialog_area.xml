@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wang.wheel.widget.IOSCharacterPickerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pick_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    app:icp_textColorSelected="?attr/colorAccent"
+    app:icp_visibleItems="7">
+
+
+</com.wang.wheel.widget.IOSCharacterPickerView>

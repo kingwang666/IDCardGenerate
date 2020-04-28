@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">证件号生成器</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">证件号生成器</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="tip_id_card">身份证号生成的虚假的身份证号，并不是真实注册过的身份证号</string>
+    <string name="area_of_birth">出生地</string>
+    <string name="birthday">生日</string>
+    <string name="sex">性别</string>
+    <string name="generate">获取</string>
+    <string name="tip_card_number">请选择生成的证件号类型</string>
+    <string name="id_card">身份证</string>
+</resources>

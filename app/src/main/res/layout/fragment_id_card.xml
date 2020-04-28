@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IDCardFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tip_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="6dp"
+        android:text="@string/tip_id_card"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/area_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/area_of_birth"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/end_barrier"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tip_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/birthday_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/birthday"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/end_barrier"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/area_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sex_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/sex"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/end_barrier"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/birthday_tv" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/end_barrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="area_tv,birthday_tv,sex_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/area_result_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/holo_blue_light"
+        app:drawableEndCompat="@drawable/ic_arrow_drop_down_black_24dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/area_tv"
+        app:layout_constraintStart_toStartOf="@id/end_barrier"
+        app:layout_constraintTop_toTopOf="@id/area_tv"
+        tools:text="@tools:sample/full_names" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/birthday_result_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/holo_blue_light"
+        app:drawableEndCompat="@drawable/ic_arrow_drop_down_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/birthday_tv"
+        app:layout_constraintStart_toStartOf="@id/end_barrier"
+        app:layout_constraintTop_toTopOf="@id/birthday_tv"
+        tools:text="@tools:sample/full_names" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/sex_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:backgroundTint="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/sex_tv"
+        app:layout_constraintEnd_toEndOf="@id/birthday_result_tv"
+        app:layout_constraintStart_toStartOf="@id/end_barrier"
+        app:layout_constraintTop_toTopOf="@id/sex_tv"
+        app:overlapAnchor="false" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/result_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textIsSelectable="true"
+        app:layout_constraintBottom_toTopOf="@id/generate_fab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sex_tv"
+        tools:text="@tools:sample/full_names" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/generate_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_add_whilte_24dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

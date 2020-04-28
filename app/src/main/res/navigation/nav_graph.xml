@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.wang.idcardgenerate.MainFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_MainFragment_to_IDCardFragment"
+            app:destination="@id/IDCardFragment">
+
+            <argument
+                android:name="title"
+                app:argType="string" />
+        </action>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/IDCardFragment"
+        android:name="com.wang.idcardgenerate.IDCardFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_id_card">
+
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/area_dialog"
+        android:name="com.wang.idcardgenerate.AreaDialog"
+        tools:layout="@layout/dialog_area">
+
+        <argument
+            android:name="provinceId"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <argument
+            android:name="cityId"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+        <argument
+            android:name="areaId"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+    </dialog>
+</navigation>
